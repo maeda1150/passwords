@@ -27,48 +27,30 @@ end
 
 # view helper
 
-def puts_line
-  puts '------------------------------------------'
+def puts_line(line='-', time=45)
+  puts line * time
 end
 
 def puts_strong_line
-  puts '=========================================='
+  puts_line('=')
 end
 
-def puts_success_line(time)
-  time = time.presence || 20
-  puts '#' * time
-end
-
-def puts_error_line(time)
-  time = time.presence || 20
-  puts '!' * time
-end
-
-def puts_warning_line(time)
-  time = time.presence || 20
-  puts '*' * time
+def puts_message_with_line(message, line='-')
+  puts_line(line, message.length)
+  puts message
+  puts_line(line, message.length)
 end
 
 def puts_success(message)
-  success_mes = "Success : #{message}"
-  puts_success_line(success_mes.length)
-  puts success_mes
-  puts_success_line(success_mes.length)
+  puts_message_with_line("Success : #{message}", '#')
 end
 
 def puts_error(message)
-  error_mes = "Error : #{message}"
-  puts_error_line(error_mes.length)
-  puts error_mes
-  puts_error_line(error_mes.length)
+  puts_message_with_line("Error : #{message}", '!')
 end
 
 def puts_warning(message)
-  warning_mes = "Warning : #{message}"
-  puts_warning_line(warning_mes.length)
-  puts warning_mes
-  puts_warning_line(warning_mes.length)
+  puts_message_with_line("Warning : #{message}", '*')
 end
 
 # form
