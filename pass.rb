@@ -244,8 +244,6 @@ end
 
 def help
   puts_strong_line
-  puts 'exec mode list'
-  puts_line
   puts 'commend : short : future'
   puts_line
   puts 'create  :   c   : create new service'

@@ -4,6 +4,9 @@
 this application manage passwords interactive for mac commandline.  
 
 ```
+------------------------------------------
+commend : short : future
+------------------------------------------
 create  :   c   : create new service
 update  :   u   : update service
 delete  :   d   : delete service
@@ -15,6 +18,7 @@ pass    :   p   : copy servise password
 url     :   r   : copy servise url
 help    :   h   : display help
 bye     :   b   : finish this app
+------------------------------------------
 ```
 
 all data is saved in `database/passwords.sqlite`.  
