@@ -2,10 +2,20 @@
 
 ## description
 this application manage passwords interactive for mac commandline.  
-1. create login account(input name and password).  
-2. create new service with name, user, password, url, comment.  
-3. display registered password list.  
-4. copy user or password or url.  
+
+```
+create  :   c   : create new service
+update  :   u   : update service
+delete  :   d   : delete service
+all     :   a   : display all servise
+list    :   l   : display all servise name
+one     :   o   : display one servise
+user    :   s   : copy servise user
+pass    :   p   : copy servise password
+url     :   r   : copy servise url
+help    :   h   : display help
+bye     :   b   : finish this app
+```
 
 all data is saved in `database/passwords.sqlite`.  
 of cource password data is encrypted.
