@@ -1,6 +1,7 @@
 # README #
 
 ## description
+ver. 0.5(still work in progress)  
 this application manage passwords interactive for mac commandline.  
 
 ```
