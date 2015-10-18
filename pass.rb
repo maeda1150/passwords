@@ -253,14 +253,14 @@ def encrypt(salt, password)
   enc = OpenSSL::Cipher::Cipher.new('aes-256-cbc')
   enc.encrypt
   enc.pkcs5_keyivgen(salt)
-  Base64.encode64(enc.update(password) + enc.final).encode('utf-8')
+  Base64.encode64(enc.update(password) + enc.final).encode('utf-8').chomp
 end
 
 def decrypt(salt, password)
   dec = OpenSSL::Cipher::Cipher.new('aes-256-cbc')
   dec.decrypt
   dec.pkcs5_keyivgen(salt)
-  dec.update(Base64.decode64(password.encode('ascii-8bit'))) + dec.final
+  (dec.update(Base64.decode64(password.encode('ascii-8bit'))) + dec.final).chomp
 end
 
 def choice_mode
