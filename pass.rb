@@ -18,7 +18,7 @@ class Service < ActiveRecord::Base
 end
 
 class Account < ActiveRecord::Base
-  self.table_name = 'account'
+  self.table_name = 'accounts'
 
   def pass_certify?(pass)
     pass == decrypt(name, password)

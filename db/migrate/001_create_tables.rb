@@ -10,7 +10,7 @@ class CreateTables < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :account do |t|
+    create_table :accounts do |t|
       t.string :name
       t.string :password
       t.string :salt
@@ -21,6 +21,6 @@ class CreateTables < ActiveRecord::Migration
 
   def self.down
     drop_table :services
-    drop_table :account
+    drop_table :accounts
   end
 end
